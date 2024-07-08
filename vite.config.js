@@ -4,10 +4,14 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+  resolve : {
+    alias : { 
+      "@" : Path2D.resolve(__dirname, "./src"),
     },
+  },
+  build : {
+    outDir: "../TasksBackend/public",
+    emptyOutDir: true,
   },
 })
 
