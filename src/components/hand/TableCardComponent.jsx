@@ -12,7 +12,11 @@ import AlertDialogComponent from './AlertDialogComponent';
 import { Pin, PinOff } from 'lucide-react';
 import api from '@/services/api.service';
 
-function CardComponent({ task, deleteTask, updateTaskList }) {
+
+
+
+function TableCardComponent({ task, deleteTask, updateTaskList }) {
+
     const [isPinned, setIsPinned] = useState(task.isPinned);
 
     async function handlePinnedTask() {
@@ -31,20 +35,16 @@ function CardComponent({ task, deleteTask, updateTaskList }) {
 
     return (
         <Card className="h-full flex flex-col justify-between">
-            <div>
-                <CardHeader>
-                    <div className='flex flex-col sm:flex-row justify-between'>
-                        <CardTitle className="max-w-full break-words text-ellipsis">{task.title}</CardTitle>
-                        <AlertDialogComponent
-                            deleteTask={deleteTask}
-                            task={task} />
-                    </div>
+            <CardHeader className="py-1">
+                <CardTitle className="max-w-full break-words"></CardTitle>
+                <div className='flex justify-between'>
                     <CardDescription className="break-words">{task.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                </CardContent>
-            </div>
-            <CardFooter className="flex justify-between">
+                    <AlertDialogComponent
+                        deleteTask={deleteTask}
+                        task={task} />
+                </div>
+            </CardHeader>
+            <CardFooter className="flex justify-between h-fit">
                 <DialogDetailsComponent
                     updateTaskList={updateTaskList}
                     task={task} />
@@ -57,4 +57,5 @@ function CardComponent({ task, deleteTask, updateTaskList }) {
     )
 }
 
-export default CardComponent;
+export default TableCardComponent
+

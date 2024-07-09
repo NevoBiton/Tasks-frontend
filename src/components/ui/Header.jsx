@@ -33,6 +33,9 @@ function Header() {
         });
     }
 
+    // if (loggedInUser === undefined) {
+    //     return;
+    // }
 
     return (
         <header className="shadow-md px-4 bg-nav-bar dark:bg-nav-bar flex justify-between items-center h-14">
