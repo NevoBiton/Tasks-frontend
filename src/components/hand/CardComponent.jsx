@@ -33,7 +33,7 @@ function CardComponent({ task, deleteTask, updateTaskList }) {
         <Card className="h-full flex flex-col justify-between">
             <div>
                 <CardHeader>
-                    <div className='flex flex-col sm:flex-row justify-between'>
+                    <div className='flex flex-row justify-between'>
                         <CardTitle className="max-w-full break-words text-ellipsis">{task.title}</CardTitle>
                         <AlertDialogComponent
                             deleteTask={deleteTask}

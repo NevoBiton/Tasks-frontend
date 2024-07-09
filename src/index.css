@@ -11,10 +11,11 @@
     /* CSS: .bg-gradient { background: var(--gradient) } */
     /* --gradient: #00467F; */
 
-    /* --my-color: #B4B4B8; */
+    --my-color: #ffffff;
 
     --header: #332941;
-    --nav-bar: #B4B4B8;
+    /* --nav-bar: #B4B4B8; */
+    --nav-bar: #2d3748;
 
     --background: 220 100% 98.5%;
     --foreground: 220 10% 1%;
@@ -52,10 +53,10 @@
 
   .dark {
 
-    /* --my-color: #071952; */
+    --my-color: #000000;
 
     --header: #B4B4B8;
-    --nav-bar: #071952;
+    --nav-bar: #2d3748;
 
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;

@@ -38,11 +38,11 @@ function Header() {
     // }
 
     return (
-        <header className="shadow-md px-4 bg-nav-bar dark:bg-nav-bar flex justify-between items-center h-14">
-            <div>
+        <header className="shadow-md px-4 bg-nav-bar dark:bg-nav-bar flex justify-between items-center h-14 ">
+            <div className="text-white">
                 <Link to="/"><div className="flex"><Type size={26} />as<span className="text-3xl">K</span>ingdom</div></Link>
             </div>
-            <nav>
+            <nav className="text-white">
                 <ul className="flex gap-2">
                     <li><Link to="/">Home</Link></li>
                     {/* <li><Link to="/about">About</Link></li> */}
@@ -118,3 +118,5 @@ function Header() {
 }
 
 export default Header
+
+

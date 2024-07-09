@@ -138,19 +138,6 @@ function TasksPage() {
             </div>
             {viewMode === 'grid' ? (
                 <>
-                    {/* <div>
-                        <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Pinned Tasks :</h1>
-                        <ul className='grid grid-cols-3 gap-4'>
-                            {pinnedTasks?.map((task) => (
-                                <li key={task._id}>
-                                    <CardComponent
-                                        task={task}
-                                        deleteTask={deleteTask}
-                                        updateTaskList={updateTaskList} />
-                                </li>
-                            ))}
-                        </ul>
-                    </div> */}
                     <div>
                         <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Pinned Tasks :</h1>
                         <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
@@ -180,65 +167,62 @@ function TasksPage() {
                 </>
             ) : (
                 <>
-                    <div>
-                        <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Pinned Tasks :</h1>
-                        <Table>
-                            <TableHeader>
-                                <TableRow>
-                                    <TableHead>Task</TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {pinnedTasks?.map((task) => (
-                                    <TableRow key={task._id}>
-                                        <TableCell className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title={task.title}>
-                                            {task.title}
-                                        </TableCell>
-                                        <TableCell >{task.status}</TableCell>
-                                        <TableCell className="w-[45vw]">
-                                            <TableCardComponent
-                                                task={task}
-                                                deleteTask={deleteTask}
-                                                updateTaskList={updateTaskList}
-                                                tableView={true}
-                                            />
-                                        </TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </div>
-                    <div>
-                        <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Unpinned Tasks :</h1>
-                        <Table>
-                            <TableHeader>
-                                <TableRow>
-                                    <TableHead>Task</TableHead>
-                                    {/* <TableHead>Status</TableHead>
-                                    <TableHead>Actions</TableHead> */}
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {unPinnedTasks?.map((task) => (
-                                    <TableRow key={task._id}>
-                                        <TableCell className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title={task.title}>
-                                            {task.title}
-                                        </TableCell>
 
-                                        <TableCell>{task.status}</TableCell>
-                                        <TableCell className="w-[45vw]">
-                                            <TableCardComponent
-                                                task={task}
-                                                deleteTask={deleteTask}
-                                                updateTaskList={updateTaskList}
-                                                tableView={true}
-                                            />
-                                        </TableCell>
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </div>
+                    <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Pinned Tasks :</h1>
+                    <Table>
+                        <TableHeader>
+                            <TableRow>
+                                <TableHead>Task</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {pinnedTasks?.map((task) => (
+                                <TableRow key={task._id}>
+                                    <TableCell className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title={task.title}>
+                                        {task.title}
+                                    </TableCell>
+                                    <TableCell >{task.status}</TableCell>
+                                    <TableCell className="w-[45vw]">
+                                        <TableCardComponent
+                                            task={task}
+                                            deleteTask={deleteTask}
+                                            updateTaskList={updateTaskList}
+                                            tableView={true}
+                                        />
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                    <h1 className="text-3xl font-bold py-2 text-header dark:text-header">Unpinned Tasks :</h1>
+                    <Table>
+                        <TableHeader>
+                            <TableRow>
+                                <TableHead>Task</TableHead>
+                                {/* <TableHead>Status</TableHead>
+                                    <TableHead>Actions</TableHead> */}
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {unPinnedTasks?.map((task) => (
+                                <TableRow key={task._id}>
+                                    <TableCell className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap" title={task.title}>
+                                        {task.title}
+                                    </TableCell>
+
+                                    <TableCell>{task.status}</TableCell>
+                                    <TableCell className="w-[45vw]">
+                                        <TableCardComponent
+                                            task={task}
+                                            deleteTask={deleteTask}
+                                            updateTaskList={updateTaskList}
+                                            tableView={true}
+                                        />
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
                 </>
             )}
             <ScrollToTopButton />
