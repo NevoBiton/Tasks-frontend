@@ -76,7 +76,7 @@ function DialogAddTaskComponent({ tasks, setTasks, isOpen, closeDialogHandler })
 
     return (
         <Dialog open={isOpen} onOpenChange={closeDialogHandler}>
-            <DialogContent className="min-w-[50vw] max-h-[80vh] overflow-y-auto">
+            <DialogContent className="min-w-[50vw] max-h-[96vh] overflow-y-auto">
                 <DialogHeader>
                     <DialogTitle>Create new Task</DialogTitle>
                     <DialogDescription>

@@ -26,8 +26,7 @@ function LoginPage() {
     async function handleLogin(ev) {
         ev.preventDefault();
         const formData = new FormData(ev.target);
-        console.log(formData);
-        const username = formData.get("username");
+        const username = formData.get("username").toLowerCase();
         const password = formData.get("password");
 
         try {

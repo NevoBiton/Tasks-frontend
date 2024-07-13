@@ -24,7 +24,7 @@ function RegisterPage() {
     async function handleRegister(ev) {
         ev.preventDefault();
         const formData = new FormData(ev.target);
-        const username = formData.get("username");
+        const username = formData.get("username").toLowerCase();
         const password = formData.get("password");
         const email = formData.get("email");
         const firstName = formData.get("fname");

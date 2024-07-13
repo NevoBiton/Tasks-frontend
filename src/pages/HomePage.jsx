@@ -1,9 +1,12 @@
-import CarouselComponent from '@/components/hand/CarouselComponent';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Button } from '@/components/ui/button';
+import CarouselComponent from '@/components/hand/CarouselComponent';
+import { AuthContext } from '@/contexts/AuthContext'; // Ensure the path is correct
 
 function HomePage() {
+    const { loggedInUser } = useContext(AuthContext);
+
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
             <header className="text-center mb-8">
@@ -15,10 +18,12 @@ function HomePage() {
                 <p className="text-center mb-4">
                     Start organizing your thoughts and never miss an important detail. Click below to create your first note.
                 </p>
-                <div className='flex gap-2'>
-                    <p className='flex items-center gap-2'><Button><Link to="/auth/register">Sign Up</Link></Button></p>
-                    <p className='flex items-center gap-2'><Button><Link to="/auth/login">Login</Link></Button></p>
-                </div>
+                {!loggedInUser && (
+                    <div className='flex gap-2'>
+                        <p className='flex items-center gap-2'><Button><Link to="/auth/register">Sign Up</Link></Button></p>
+                        <p className='flex items-center gap-2'><Button><Link to="/auth/login">Login</Link></Button></p>
+                    </div>
+                )}
             </main>
         </div>
     );
