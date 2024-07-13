@@ -179,7 +179,7 @@ function DialogDetailsComponent({ task, updateTaskList }) {
                                 <span className='text-xl font-medium'>Todos :</span>
                                 {todos.map((todo, index) => (
                                     <div key={index} className="flex items-center justify-between">
-                                        <Label className="text-l font-normal text-gray-400">{todo.title}</Label>
+                                        <Label className={`text-l font-normal text-gray-400 ${todo.isComplete ? 'line-through text-gray-400' : ''}`} >{todo.title}</Label>
                                         <Input
                                             className="h-6 w-fit"
                                             type="checkbox"
