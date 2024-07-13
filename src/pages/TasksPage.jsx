@@ -95,34 +95,6 @@ function TasksPage() {
         setTasks(tasks.map(task => task._id === updatedTask._id ? updatedTask : task));
     }
 
-    // if (loading) {
-    //     return (
-    //         <div className='flex flex-col gap-4 py-4  max-w-[70vw] mx-auto'>
-    //             <DialogAddTaskComponent
-    //                 tasks={tasks}
-    //                 setTasks={setTasks}
-    //                 isOpen={isOpen}
-    //                 closeDialogHandler={() => setIsOpen(false)}
-    //             />
-    //             <Button onClick={() => setIsOpen(true)} className="font-normal flex gap-2 items-center bg-green-600 hover:bg-green-700 text-white text-sm py-2 px-4 rounded-md w-fit">Add Task <ClipboardList size={20} /></Button>
-    //             <div>
-    //                 <h1 className="text-3xl font-bold py-2 text-gray-600">Pinned Tasks :</h1>
-    //                 <ul className='grid grid-cols-3 gap-4'>
-    //                     {skeletons?.map((skeleton, index) => (
-    //                         <div key={index} className="flex flex-col space-y-3">
-    //                             <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-    //                             <div className="space-y-2">
-    //                                 <Skeleton className="h-4 w-[250px]" />
-    //                                 <Skeleton className="h-4 w-[200px]" />
-    //                             </div>
-    //                         </div>
-    //                     ))}
-    //                 </ul>
-    //             </div>
-    //         </div >
-    //     )
-    // }
-
     if (loading) {
         return (
             <div className='flex flex-col gap-4 py-4 max-w-[70vw] mx-auto'>

@@ -21,13 +21,13 @@ export function CarouselComponent() {
     ]
 
     return (
-        <Carousel className="w-full max-w-xs">
+        <Carousel className="w-full max-w-[250px] sm:max-w-xs">
             <CarouselContent>
                 {Array.from({ length: 3 }).map((_, index) => (
                     <CarouselItem key={index}>
                         <div className="p-1">
                             <Card>
-                                <CardContent className="flex aspect-square items-center justify-center p-0">
+                                <CardContent className="flex aspect-square items-center justify-center p-0 ">
                                     {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
                                     <img src={imagesUrl[index]} alt="" className="object-cover w-full h-full" />
 
@@ -44,3 +44,7 @@ export function CarouselComponent() {
 }
 
 export default CarouselComponent
+
+
+
+
